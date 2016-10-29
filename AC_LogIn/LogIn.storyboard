@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="16B2555" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="lbT-8O-qE8">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Log In View Controller-->
+        <scene sceneID="6sh-Hv-Hab">
+            <objects>
+                <viewController storyboardIdentifier="logIn" id="lbT-8O-qE8" customClass="LogInViewController" customModule="AC_LogIn" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="dHz-gY-atI"/>
+                        <viewControllerLayoutGuide type="bottom" id="lir-ox-udr"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="lFK-b4-BFs">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pic1" translatesAutoresizingMaskIntoConstraints="NO" id="6uR-UJ-hUl">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </imageView>
+                            <visualEffectView opaque="NO" contentMode="scaleAspectFill" translatesAutoresizingMaskIntoConstraints="NO" id="V6Q-AS-DR0">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="yJE-gt-6jN">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                </view>
+                                <vibrancyEffect>
+                                    <blurEffect style="regular"/>
+                                </vibrancyEffect>
+                            </visualEffectView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QRx-Ng-6vo">
+                                <rect key="frame" x="32" y="497" width="302" height="50"/>
+                                <color key="backgroundColor" red="0.18039163947105408" green="0.46894121170043945" blue="0.85096150636672974" alpha="0.53451412671232879" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="qaG-Q4-IDc"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
+                                <state key="normal" title="Sign Up with Facebook">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="logInButton:" destination="lbT-8O-qE8" eventType="touchUpInside" id="Q7s-aL-fLu"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="lir-ox-udr" firstAttribute="top" secondItem="QRx-Ng-6vo" secondAttribute="bottom" constant="120" id="4mt-1j-gOn"/>
+                            <constraint firstAttribute="trailing" secondItem="V6Q-AS-DR0" secondAttribute="trailing" id="9SS-Em-mXj"/>
+                            <constraint firstAttribute="trailing" secondItem="6uR-UJ-hUl" secondAttribute="trailing" id="Bxx-Lt-sgM"/>
+                            <constraint firstAttribute="trailing" secondItem="QRx-Ng-6vo" secondAttribute="trailing" constant="41" id="DEm-Rc-zS1"/>
+                            <constraint firstItem="6uR-UJ-hUl" firstAttribute="leading" secondItem="lFK-b4-BFs" secondAttribute="leading" id="DPQ-yn-bGL"/>
+                            <constraint firstItem="V6Q-AS-DR0" firstAttribute="bottom" secondItem="lir-ox-udr" secondAttribute="top" id="IwT-LR-IgQ"/>
+                            <constraint firstItem="lir-ox-udr" firstAttribute="top" secondItem="6uR-UJ-hUl" secondAttribute="bottom" id="J5O-ye-qmp"/>
+                            <constraint firstItem="QRx-Ng-6vo" firstAttribute="leading" secondItem="lFK-b4-BFs" secondAttribute="leading" constant="32" id="S02-J3-bcK"/>
+                            <constraint firstItem="V6Q-AS-DR0" firstAttribute="leading" secondItem="lFK-b4-BFs" secondAttribute="leading" id="c9N-kr-Q67"/>
+                            <constraint firstItem="V6Q-AS-DR0" firstAttribute="top" secondItem="lFK-b4-BFs" secondAttribute="top" id="t01-hg-GSM"/>
+                            <constraint firstItem="6uR-UJ-hUl" firstAttribute="top" secondItem="lFK-b4-BFs" secondAttribute="top" id="v19-f1-TGa"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="myImage" destination="6uR-UJ-hUl" id="ady-Jc-AU9"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="aDd-dI-inX" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-63.200000000000003" y="95.802098950524751"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="pic1" width="511" height="512"/>
+    </resources>
+</document>

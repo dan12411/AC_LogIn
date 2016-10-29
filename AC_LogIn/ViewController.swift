@@ -9,6 +9,16 @@
 import UIKit
 
 class ViewController: UIViewController {
+    
+    // 按下按鈕，存入登出的值，並present登出後畫面
+    @IBAction func logOutButton(_ sender: UIButton) {
+        
+        UserDefaults.standard.set(0, forKey: "checkLogIn")
+        UserDefaults.standard.synchronize()
+        let controller = UIStoryboard(name: "LogIn", bundle: nil).instantiateViewController(withIdentifier: "logIn")
+        present(controller, animated: true, completion: nil)
+        
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
